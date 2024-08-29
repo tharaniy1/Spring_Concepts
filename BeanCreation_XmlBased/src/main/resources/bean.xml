@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- destroy-method must have no arguments, but may throw any exception.-->
+    <bean id = "car" class="com.preparation.spring.Model.Vehicle" primary="true" destroy-method="preDestory">
+        <property name="name" value="car"/>
+    </bean>
+
+    <!-- init-method to invoke after setting bean properties. The method must have no arguments, but may throw any exception. -->
+    <bean id = "truck" class="com.preparation.spring.Model.Vehicle" init-method="postConstruct">
+        <property name="name" value="truck"/>
+    </bean>
+
+</beans>
