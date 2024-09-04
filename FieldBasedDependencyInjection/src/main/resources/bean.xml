@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id = "Person" class="com.preparation.spring.Model.Person" init-method="initialize">
+         <property name = "name" value="Tara"/>
+         <property name="vehicle" ref="Vehicle"/>
+    </bean>
+
+    <bean id = "Vehicle" class="com.preparation.spring.Model.Vehicle" init-method="initialize">
+        <property name="name" value="Toyota"/>
+    </bean>
+
+</beans>
